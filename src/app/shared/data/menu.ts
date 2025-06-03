@@ -24,9 +24,7 @@ export const menuItems: Menu[] = [
     badge_value: "New",
     badge_color: "success",
     children: [
-      { path: '/reports/products', title: 'products', type: 'link' },
       { path: '/reports/sales', title: 'sales', type: 'link' },
-      { path: '/reports/sales-return', title: 'sales_return', type: 'link' },
     ],
   },
   {
