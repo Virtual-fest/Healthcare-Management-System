@@ -1,4 +1,4 @@
-import { Todo, TodoSidebar } from "../interface/todos"
+import { TodoSidebar } from "../interface/todos"
 
 export const sidebar: TodoSidebar[] = [
     {
@@ -35,32 +35,5 @@ export const sidebar: TodoSidebar[] = [
         value: 'trash',
         icon: 'trash',
         color: 'danger'
-    }
-]
-
-export const todos: Todo[] = [
-    {
-        id: 1,
-        task: 'Update all admin themes',
-        status: 'completed',
-        date: '25/01/2025'
-    },
-    {
-        id: 2,
-        task: 'Prepare a summary presentation for the stakeholders and finish the in-depth analysis for the quarterly financial report.',
-        status: 'pending',
-        date: '12/01/2025'
-    },
-    {
-        id: 3,
-        task: 'Review project documentation',
-        status: 'pending',
-        date: '01/07/2024'
-    },
-    {
-        id: 4,
-        task: 'Plan out and complete the weekend\'s events, including any planned excursions, get-togethers, and downtime.',
-        status: 'completed',
-        date: '28/02/2024'
     }
 ]

@@ -43,14 +43,6 @@ export interface Notification {
   date: string;
 }
 
-export interface Role {
-  id: number;
-  role: string;
-  creation_date: string;
-  last_update_date: string;
-  status: string;
-}
-
 export interface Module {
   id: number;
   name: string;

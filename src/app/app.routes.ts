@@ -10,7 +10,7 @@ import { full } from './shared/routes/full.routes';
 export const routes: Routes = [
     {
         path: '',
-        redirectTo: '/reports/products',
+        redirectTo: '/sample-page',
         pathMatch: 'full'
     },
     {

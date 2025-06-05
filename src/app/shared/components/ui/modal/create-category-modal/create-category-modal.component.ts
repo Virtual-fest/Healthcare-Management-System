@@ -1,5 +1,4 @@
 import { Component, EventEmitter, HostListener, Output } from '@angular/core';
-import { AngularEditorModule } from '@kolkov/angular-editor';
 import { Select2Data, Select2Module } from 'ng-select2-component';
 
 import { category, categoryStatus } from '../../../../data/category';
@@ -8,7 +7,7 @@ import { OutsideDirective } from '../../../../directives/outside.directive';
 
 @Component({
   selector: 'app-create-category-modal',
-  imports: [AngularEditorModule, Select2Module, OutsideDirective],
+  imports: [Select2Module, OutsideDirective],
   templateUrl: './create-category-modal.component.html',
   styleUrl: './create-category-modal.component.scss'
 })

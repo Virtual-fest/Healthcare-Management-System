@@ -3,17 +3,6 @@ import { Menu } from "../interface/menu";
 
 export const menuItems: Menu[] = [
   {
-    title: 'users',
-    id: 'users',
-    icon: 'user',
-    type: 'sub',
-    active: false,
-    level: 1,
-    children: [
-      { path: '/user/user-profile/1', title: 'user_profile', type: 'link' },
-    ],
-  },
-  {
     title: 'reports',
     id: 'reports',
     icon: 'reports',
