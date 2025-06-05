@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import {AfterViewInit, Component, Input} from '@angular/core';
 import feather from 'feather-icons';
 
 @Component({
@@ -7,7 +7,7 @@ import feather from 'feather-icons';
   templateUrl: './feather-icon.component.html',
   styleUrl: './feather-icon.component.scss'
 })
-export class FeatherIconComponent {
+export class FeatherIconComponent implements AfterViewInit{
 
   @Input('icon') public icon: string | undefined;
   @Input() class: string;

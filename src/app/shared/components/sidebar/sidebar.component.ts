@@ -1,18 +1,16 @@
-import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { NavigationEnd, Router, RouterModule } from '@angular/router';
+import {CommonModule} from '@angular/common';
+import {Component} from '@angular/core';
+import {NavigationEnd, Router, RouterModule} from '@angular/router';
 
-import { LogoComponent } from "../header/widgets/logo/logo.component";
-import { FeatherIconComponent } from "../ui/feather-icon/feather-icon.component";
-import { SvgIconComponent } from "../ui/svg-icon/svg-icon.component";
-import { items, menuItems } from '../../data/menu';
-import { Menu } from '../../interface/menu';
-import { LayoutService } from '../../services/layout.service';
+import {LogoComponent} from "../header/widgets/logo/logo.component";
+import {SvgIconComponent} from "../ui/svg-icon/svg-icon.component";
+import {items, menuItems} from '../../data/menu';
+import {Menu} from '../../interface/menu';
+import {LayoutService} from '../../services/layout.service';
 
 @Component({
   selector: 'app-sidebar',
-  imports: [CommonModule, RouterModule,
-            LogoComponent, FeatherIconComponent, SvgIconComponent],
+  imports: [CommonModule, RouterModule, LogoComponent, SvgIconComponent],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.scss'
 })
@@ -21,8 +19,6 @@ export class SidebarComponent {
 
   public menuItems = menuItems;
   public items = items;
-  public leftArrow: boolean = false;
-  public rightArrow: boolean = true;
   public pinedItem: Menu[] = [];
 
   constructor(private router: Router, public layoutService: LayoutService) {
@@ -32,7 +28,7 @@ export class SidebarComponent {
         if (event instanceof NavigationEnd) {
           const urlTree = this.router.parseUrl(event.url);
           const cleanPath = '/' + urlTree.root.children['primary']?.segments.map(segment => segment.path).join('/');
-  
+
           menuItems.filter(items => {
             if (items.path === cleanPath) {
               this.setNavActive(items);
@@ -116,27 +112,6 @@ export class SidebarComponent {
     item.active =! item.active;
   }
 
-  scrollLeft() {
-    this.rightArrow = true;
-    if (this.layoutService.margin != 0) {
-      this.layoutService.margin = this.layoutService.margin + 500;
-    }
-
-    if (this.layoutService.margin == 0) {
-      this.leftArrow = false;
-    }
-  }
-
-  scrollRight() {
-    this.leftArrow = true;
-    if (this.layoutService.margin != this.layoutService.scrollMargin) {
-      this.layoutService.margin = this.layoutService.margin - 500;
-    }
-    if (this.layoutService.margin == this.layoutService.scrollMargin) {
-      this.rightArrow = false;
-    }
-  }
-
   closeSidebar() {
     this.layoutService.closeSidebar = true;
   }
@@ -171,5 +146,4 @@ export class SidebarComponent {
       }
     }
   }
-
 }

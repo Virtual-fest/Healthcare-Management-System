@@ -12,11 +12,6 @@
     </div>
 
     <nav class="sidebar-main">
-        @if(leftArrow){
-            <div class="left-arrow" (click)="scrollLeft()">
-              <app-feather-icon [icon]="'arrow-left'"></app-feather-icon>
-            </div>
-          }
         <div id="sidebar-menu" [ngStyle]="{ 'margin-left': layoutService.margin + 'px' }">
             <ul class="sidebar-links sidebar-scroll" id="simple-bar" #sidebar>
                 <li class="back-btn">    
@@ -96,8 +91,5 @@
                 }
             </ul>
         </div>
-        @if(rightArrow){
-            <div class="right-arrow" (click)="scrollRight()"><app-feather-icon [icon]="'arrow-right'"></app-feather-icon></div>
-        }
     </nav>
 </div>

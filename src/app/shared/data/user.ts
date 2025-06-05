@@ -1,7 +1,7 @@
 import { User, Users, Module } from "../interface/user";
 
 export const user: User = {
-  name: 'Emay Walter',
+  name: 'Vishv Kevadiya',
   user_profile: 'assets/images/dashboard/profile.png',
   user_email: 'emaywalter@jourrapide.com',
   addresses: [
