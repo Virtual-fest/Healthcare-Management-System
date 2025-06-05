@@ -1,8 +1,10 @@
-import { Routes } from "@angular/router";
+import {Routes} from "@angular/router";
 
-import { Error403Component } from "./error-403/error-403.component";
-import { Error404Component } from "./error-404/error-404.component";
-import { Error500Component } from "./error-500/error-500.component";
+import {Error403Component} from "./error-403/error-403.component";
+import {Error404Component} from "./error-404/error-404.component";
+import {Error500Component} from "./error-500/error-500.component";
+import {MaintenanceComponent} from "./maintenance/maintenance.component";
+import {ComingSoonComponent} from "./coming-soon/coming-soon.component";
 
 export const error: Routes = [
     {
@@ -16,5 +18,13 @@ export const error: Routes = [
     {
         path: '500',
         component: Error500Component
-    }
+    },
+    {
+        path: 'under-maintenance',
+        component: MaintenanceComponent
+    },
+    {
+        path: 'coming-soon',
+        component: ComingSoonComponent
+    },
 ]

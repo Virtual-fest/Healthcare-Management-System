@@ -54,9 +54,6 @@
     box-shadow: 0 0 37px rgba(8, 21, 66, 0.05);
     margin: 0 auto;
     background-color: $white;
-    .form-check-input[type="checkbox"] {
-      margin-top: 0px !important;
-    }
     .theme-form {
       h4 {
         margin-bottom: 5px;
@@ -130,7 +127,7 @@
 
       .link {
         position: absolute;
-        top: 0px;
+        top: 0;
         right: 0;
 
         [dir="rtl"] & {

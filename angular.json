@@ -48,7 +48,6 @@
             ],
             "styles": [
               "src/styles.scss",
-              "node_modules/ngx-toastr/toastr.css",
               "node_modules/ngx-spinner/animations/ball-clip-rotate.css",
               "node_modules/ngx-spinner/animations/ball-fall.css",
               "node_modules/ngx-spinner/animations/ball-spin-clockwise.css"
