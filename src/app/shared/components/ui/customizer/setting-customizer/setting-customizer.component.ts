@@ -1,9 +1,9 @@
-import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Output } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import {CommonModule} from '@angular/common';
+import {Component, EventEmitter, Output} from '@angular/core';
+import {FormsModule} from '@angular/forms';
+import {ActivatedRoute, Router} from '@angular/router';
 
-import { LayoutService } from '../../../../services/layout.service';
+import {LayoutService} from '../../../../services/layout.service';
 
 @Component({
   selector: 'app-setting-customizer',
@@ -115,18 +115,6 @@ export class SettingCustomizerComponent {
     window.location.reload();
   }
 
-  handleColorLayout(layoutType: string, primaryColor: string, secondaryColor: string) {
-    document.documentElement.style.setProperty('--theme-default', primaryColor);
-    document.documentElement.style.setProperty('--theme-secondary', secondaryColor);
-    localStorage.setItem('--theme-default', primaryColor);
-    localStorage.setItem('--theme-secondary', secondaryColor);
-    this.layoutService.config.color.primary = primaryColor;
-    this.layoutService.config.color.secondary = secondaryColor;
-    
-    this.handleLayout(layoutType)
-    window.location.reload();
-  }
-
   handleLayout(value: string) {
     this.layoutService.config.settings.layout_version = value;
     localStorage.setItem('layout_version', this.layoutService.config.settings.layout_version)
@@ -134,5 +122,4 @@ export class SettingCustomizerComponent {
     document.body.className = this.layoutService.config.settings.layout_version;
     this.settingOpen.emit(false);
   }
-  
 }

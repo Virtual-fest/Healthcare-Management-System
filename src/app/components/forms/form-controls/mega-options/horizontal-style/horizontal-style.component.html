@@ -21,42 +21,6 @@
                         </span>
                       </span>
                       <span>{{item.description }}</span>
-                      @if(item.rating == 5){
-                        <span class="rating-star-wrapper">
-                          <div class="rating">
-                            <bar-rating [rate]="item.rating" [readonly]="true" [max]="5">
-                              <ng-template ratingActive>
-                                <i class="fa-solid fa-star" style="color: #ffb829"></i>
-                              </ng-template>
-                              <ng-template ratingInactive>
-                                <i class="fa-solid fa-star" style="color: #d2d2d2"></i>
-                              </ng-template>
-                              <ng-template ratingFraction>
-                                <i class="fa-solid fa-star-half-stroke" style="color: #ffb829"></i>
-                              </ng-template>
-                            </bar-rating>
-                          </div>
-                          {{ item.label }}
-                        </span>
-                      }
-                      @if(item.rating == 4){
-                        <span class="rating-star-wrapper">
-                          <div class="rating">
-                            <bar-rating [rate]="item.rating" [readonly]="true" [max]="5">
-                              <ng-template ratingActive>
-                                <i class="fa-solid fa-star" style="color: #ffb829"></i>
-                              </ng-template>
-                              <ng-template ratingInactive>
-                                <i class="fa-solid fa-star" style="color: #d2d2d2"></i>
-                              </ng-template>
-                              <ng-template ratingFraction>
-                                <i class="fa-solid fa-star-half-stroke" style="color: #ffb829"></i>
-                              </ng-template>
-                            </bar-rating>
-                          </div>
-                          {{ item.label }}
-                        </span>
-                      }
                     </span>
                   </label>
                 </div>

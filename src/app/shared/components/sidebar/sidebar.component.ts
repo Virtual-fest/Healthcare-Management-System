@@ -1,18 +1,16 @@
-import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { NavigationEnd, Router, RouterModule } from '@angular/router';
-import { TranslatePipe } from '@ngx-translate/core';
-
-import { LogoComponent } from "../header/widgets/logo/logo.component";
-import { FeatherIconComponent } from "../ui/feather-icon/feather-icon.component";
-import { SvgIconComponent } from "../ui/svg-icon/svg-icon.component";
-import { items, menuItems } from '../../data/menu';
-import { Menu } from '../../interface/menu';
-import { LayoutService } from '../../services/layout.service';
+import {CommonModule} from '@angular/common';
+import {Component} from '@angular/core';
+import {NavigationEnd, Router, RouterModule} from '@angular/router';
+import {LogoComponent} from "../header/widgets/logo/logo.component";
+import {FeatherIconComponent} from "../ui/feather-icon/feather-icon.component";
+import {SvgIconComponent} from "../ui/svg-icon/svg-icon.component";
+import {items, menuItems} from '../../data/menu';
+import {Menu} from '../../interface/menu';
+import {LayoutService} from '../../services/layout.service';
 
 @Component({
   selector: 'app-sidebar',
-  imports: [CommonModule, RouterModule,  TranslatePipe,
+  imports: [CommonModule, RouterModule,
             LogoComponent, FeatherIconComponent, SvgIconComponent],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.scss'

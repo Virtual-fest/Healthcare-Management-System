@@ -1,13 +1,13 @@
-import { CommonModule } from '@angular/common';
-import { Component, HostListener } from '@angular/core';
-import { ActivatedRoute, Router, RouterOutlet } from '@angular/router';
+import {CommonModule} from '@angular/common';
+import {Component, HostListener} from '@angular/core';
+import {ActivatedRoute, RouterOutlet} from '@angular/router';
 
-import { HeaderComponent } from "../../header/header.component";
-import { FooterComponent } from "../../footer/footer.component";
-import { SidebarComponent } from '../../sidebar/sidebar.component';
-import { BreadcrumbComponent } from '../../ui/breadcrumb/breadcrumb.component';
-import { LayoutService } from '../../../services/layout.service';
-import { CustomizerComponent } from "../../ui/customizer/customizer.component";
+import {HeaderComponent} from "../../header/header.component";
+import {FooterComponent} from "../../footer/footer.component";
+import {SidebarComponent} from '../../sidebar/sidebar.component';
+import {BreadcrumbComponent} from '../../ui/breadcrumb/breadcrumb.component';
+import {LayoutService} from '../../../services/layout.service';
+import {CustomizerComponent} from "../../ui/customizer/customizer.component";
 
 @Component({
   selector: 'app-content',
@@ -20,7 +20,7 @@ export class ContentComponent {
 
   public layout: string;
 
-  constructor(public layoutService: LayoutService, private route: ActivatedRoute, private router: Router) {
+  constructor(public layoutService: LayoutService, private route: ActivatedRoute) {
     this.layout = this.layoutService.config.settings.layout;
     
     this.route.queryParams.subscribe((params) => {

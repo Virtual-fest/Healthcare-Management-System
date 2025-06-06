@@ -1,29 +1,26 @@
-import { CommonModule, DecimalPipe } from '@angular/common';
-import { Component, EventEmitter, Input, Output, SimpleChanges, ViewChild } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
-import { OwlDateTimeComponent, OwlDateTimeModule, OwlNativeDateTimeModule } from '@danielmoncada/angular-datetime-picker';
-import { Observable } from 'rxjs';
+import {CommonModule, DecimalPipe} from '@angular/common';
+import {Component, EventEmitter, Input, Output, SimpleChanges} from '@angular/core';
+import {FormsModule} from '@angular/forms';
+import {RouterModule} from '@angular/router';
+import {Observable} from 'rxjs';
 import Swal from 'sweetalert2';
 
-import { PaginationComponent } from '../pagination/pagination.component';
-import { SvgIconComponent } from "../svg-icon/svg-icon.component";
-import { TooltipComponent } from "../tooltip/tooltip.component";
-import { PageSizeOptions, Pagination, TableClickedAction, TableConfigs, TableRows } from '../../../interface/common';
-import { TableService } from '../../../services/table.service';
+import {PaginationComponent} from '../pagination/pagination.component';
+import {SvgIconComponent} from "../svg-icon/svg-icon.component";
+import {TooltipComponent} from "../tooltip/tooltip.component";
+import {PageSizeOptions, Pagination, TableClickedAction, TableConfigs, TableRows} from '../../../interface/common';
+import {TableService} from '../../../services/table.service';
 
 @Component({
   selector: 'app-table',
   imports: [CommonModule, FormsModule, RouterModule,
-            OwlDateTimeModule, OwlNativeDateTimeModule, PaginationComponent,
+            PaginationComponent,
             SvgIconComponent, TooltipComponent],
   providers: [DecimalPipe],
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.scss']
 })
 export class TableComponent {
-
-  @ViewChild('dateSelection', { static: false }) dateSelection!: OwlDateTimeComponent<any>;
 
   @Input() tableConfig: TableConfigs;
   @Input() hasCheckbox: boolean;

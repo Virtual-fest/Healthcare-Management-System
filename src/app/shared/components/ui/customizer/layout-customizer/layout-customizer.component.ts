@@ -1,9 +1,9 @@
-import { Component, EventEmitter, Output } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import {Component, EventEmitter, Output} from '@angular/core';
+import {ActivatedRoute, Router} from '@angular/router';
 
-import { layouts } from '../../../../data/layout';
-import { Layout } from '../../../../interface/layout';
-import { LayoutService } from '../../../../services/layout.service';
+import {layouts} from '../../../../data/layout';
+import {Layout} from '../../../../interface/layout';
+import {LayoutService} from '../../../../services/layout.service';
 
 @Component({
   selector: 'app-layout-customizer',
@@ -45,13 +45,13 @@ export class LayoutCustomizerComponent {
 
     this.router.navigate([], {
       relativeTo: this.route,
-      queryParams: { layout: layout.slug },
-      queryParamsHandling: 'merge'
+      // queryParams: { layout: layout.slug },
+      // queryParamsHandling: 'merge'
     }).then(() => {
       window.location.reload();
     });
 
     this.closeCustomizer();
   }
-  
+
 }
