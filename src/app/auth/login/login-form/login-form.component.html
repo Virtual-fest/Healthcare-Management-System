@@ -1,0 +1,63 @@
+<form class="theme-form" [formGroup]="loginForm" (ngSubmit)="login()">
+    <h4>Sign in to account</h4>
+    <p>Enter your email & password to login</p>
+    <div class="form-group needs-validation custom-input">
+        <label class="form-label" for="validationTooltip01">Email Address</label>
+        <input class="form-control" id="validationTooltip01" type="email" placeholder="test@gmail.com"
+               [formControlName]="'email'" autocomplete="false"
+               [ngClass]="{ 'is-invalid' : loginForm.controls['email'].touched &&
+        loginForm.controls['email'].errors?.['required'] , 'is-valid' : loginForm.controls['email'].valid}">
+        @if (loginForm.controls['email'].valid) {
+            <div class="valid-tooltip">Looks's Good!</div>
+        }
+        @if (loginForm.controls['email'].touched && loginForm.controls['email'].errors?.['required'] && loginForm.controls['email'].errors?.['email']) {
+            <div class="invalid-tooltip">Please provide a valid Email.</div>
+        }
+    </div>
+    <div class="form-group needs-validation custom-input">
+        <label class="form-label" for="validationTooltip02">Email Password</label>
+        <input class="form-control" id="validationTooltip02" type="text" name="login[password]" placeholder="*********"
+               [formControlName]="'password'" autocomplete="false"
+               [ngClass]="{ 'is-invalid' : loginForm.controls['password'].touched &&
+        loginForm.controls['password'].errors?.['required'] , 'is-valid' : loginForm.controls['password'].valid}">
+        @if (loginForm.controls['password'].valid) {
+            <div class="valid-tooltip">Looks's Good!</div>
+        }
+        @if (loginForm.controls['password'].touched && loginForm.controls['password'].errors?.['required']) {
+            <div class="invalid-tooltip">Password is required.</div>
+        }
+    </div>
+    <div class="form-group mb-0">
+        <div class="form-check flex gap-2 items-center">
+            <input class="checkbox-primary form-check-input custom-checkbox" id="checkbox1" type="checkbox">
+            <label class="text-muted form-check-label !mb-0" for="checkbox1">Remember password</label>
+        </div>
+        <a class="link" [routerLink]="['/auth/forgot-password']">Forgot password?</a>
+        <div class="text-end">
+            <button class="btn btn-primary btn-block w-full text-white mt-[24px]" type="submit"
+                    [disabled]="!loginForm.valid">Sign in
+            </button>
+        </div>
+    </div>
+    <h6 class="text-muted or mt-[24px]">Or Sign in with</h6>
+    <div class="social mt-[24px]">
+        <div class="btn-showcase">
+            <a class="btn btn-light inline-block" href="https://www.linkedin.com/login" target="_blank">
+                <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a class="btn btn-light inline-block" href="https://twitter.com/login?lang=en" target="_blank">
+                <i class="fa-brands fa-x-twitter"></i>
+            </a>
+            <a class="btn btn-light inline-block" href="https://www.facebook.com/" target="_blank">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a class="btn btn-light inline-block" href="https://www.google.com/" target="_blank">
+                <i class="fa-brands fa-google"></i>
+            </a>
+        </div>
+    </div>
+    <p class="text-center mt-[24px] !mb-0">
+        Don't have account?
+        <a class="ms-2" [routerLink]="['/auth/register']">Create Account</a>
+    </p>
+</form>
