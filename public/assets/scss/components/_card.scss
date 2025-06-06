@@ -541,7 +541,7 @@
   display: flex;
   align-items: flex-end;
   transition: 0.4s ease-out;
-  box-shadow: 0 7px 10px rgba($black, 0.5);
+  box-shadow: 0px 7px 10px rgba($black, 0.5);
 
   @media (max-width: 1399px) and (min-width: 1200px) {
     padding: 4px;
@@ -622,6 +622,7 @@
   height: 136px;
   position: relative;
   inset: 0;
+  background: url(../../images/masonry/6.jpg);
   background-size: cover;
   cursor: pointer;
   background-repeat: no-repeat;

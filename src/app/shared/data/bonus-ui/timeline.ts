@@ -7,7 +7,7 @@ export const animatedTimeline: AnimatedTimeline[] = [
         events: [
             {
                 id: 1,
-                title: "Project HMS",
+                title: "Project Cuba",
                 description: "The goal of this January initiative was to enhance the online theme experience for customers."
             },
             {

@@ -19,7 +19,7 @@ export class ProfileComponent {
 
   logOut() {
     localStorage.clear();
-    this.router.navigate(['/auth/login']).then()
+    this.router.navigate(['/auth/login'])
   }
   
 }

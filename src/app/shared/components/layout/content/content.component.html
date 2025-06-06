@@ -1,5 +1,5 @@
 <!-- page-wrapper Start-->
-<div class="page-wrapper compact-sidebar compact-small material-icon"  id="pageWrapper">
+<div class="page-wrapper" [ngClass]="layoutService.config.settings.sidebar_type" id="pageWrapper">
 
     <!-- Page Header Start-->
     <div class="page-header" [class.close_icon]="layoutService.closeSidebar">
@@ -10,7 +10,7 @@
     <!-- Page Body Start-->
     <div class="page-body-wrapper">
         <!-- Page Sidebar Start-->
-        <div class="sidebar-wrapper" [attr.data-layout]="'stroke-svg'"  [class.close_icon]="layoutService.closeSidebar">
+        <div class="sidebar-wrapper" [attr.data-layout]="layoutService.config.settings.icon"  [class.close_icon]="layoutService.closeSidebar">
             <app-sidebar></app-sidebar>
         </div>
         <!-- Page Sidebar Ends-->

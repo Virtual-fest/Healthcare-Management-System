@@ -13,6 +13,6 @@ import { CardComponent } from "../../../../../shared/components/ui/card/card.com
 export class BasicSweetalertComponent {
 
   open() {
-    Swal.fire("Welcome! to HMS!")
+    Swal.fire("Welcome! to the cuba theme!")
   }
 }

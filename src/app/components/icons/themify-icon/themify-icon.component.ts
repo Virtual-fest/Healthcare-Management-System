@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 
 import { CardComponent } from "../../../shared/components/ui/card/card.component";
 import { themifyIcon } from '../../../shared/data/icons/themify';
@@ -16,6 +17,8 @@ export class ThemifyIconComponent {
   public details: boolean = false;
   public icon: string;
   public val: string;
+
+  constructor(private toast: ToastrService){}
 
   getDetails(value: string){
     this.details = true;
@@ -36,6 +39,13 @@ export class ThemifyIconComponent {
     document.execCommand('copy');
     document.body.removeChild(selBox);
 
+    this.toast.show("Code Copied to clipboard!", "",
+    {
+      positionClass: 'toast-bottom-right',
+      closeButton: true,
+      toastClass: "alert alert-copy notify-alert",
+      timeOut: 1000
+    })
   }
   
 }

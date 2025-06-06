@@ -1,7 +1,9 @@
-import { User, Users, Module } from "../interface/user";
+import { Select2Data } from "ng-select2-component";
+import { Tabs } from "../interface/common";
+import { User, Users, Notification, Role, Module } from "../interface/user";
 
 export const user: User = {
-  name: 'Vishv Kevadiya',
+  name: 'Emay Walter',
   user_profile: 'assets/images/dashboard/profile.png',
   user_email: 'emaywalter@jourrapide.com',
   addresses: [
@@ -166,6 +168,226 @@ export const users: Users[] = [
     role: "Consumer",
     status: "active",
     creation_date: "30 August 2019,04:00 PM"
+  }
+]
+
+export const userRecentActivity = [
+  {
+    id: 1,
+    title: 'Freelance Project Discussion',
+    description: `<span class="c-o-light">worked hard with the client to make sure the design reflects their objectives and brand identity.</span><span class="c-o-light">Optimised the website for quicker loads by implementing a responsive layout.</span>`,
+    date: '12th Feb, 2024',
+    time: 'Today',
+  },
+  {
+    id: 2,
+    title: 'Brand Collaboration',
+    description: `<span class="c-o-light">improved the user experience by using a sleek, contemporary style that matches the brand's urban, smart look.</span><span class="c-o-light">Multimedia components, including infographic and films, were used to improve user interaction and communicate the campaign's impact.</span>`,
+    date: '12th Feb, 2024',
+    time: '02:00 PM',
+    images: [
+      { image: 'assets/images/dashboard-2/order/sub-product/4.png', title: 'chair' },
+      { image: 'assets/images/dashboard-2/order/sub-product/8.png', title: 'neckless' },
+      { image: 'assets/images/dashboard-2/order/sub-product/11.png', title: 'slipper' },
+      { image: 'assets/images/dashboard-2/order/sub-product/7.png', title: 'earings' },
+      { image: 'assets/images/dashboard-2/order/sub-product/3.png', title: 'men t-shirt' },
+      { image: 'assets/images/dashboard-2/order/sub-product/9.png', title: 'men shorts' }
+    ]
+  },
+  {
+    id: 3,
+    title: 'Review of Project and Milestones',
+    description: `<span class="c-o-light">Having the objective of developing an aesthetically attractive and intuitive e-commerce platform for "Multikart and Fastkart."</span><span class="c-o-light">This entails being aware of the target market, the brand's goal, and the particular features that the website must have.</span>`,
+    date: '08th Feb, 2024',
+    time: '5 days ago',
+  },
+  {
+    id: 4,
+    title: 'Wireframing Designs',
+    description: `<span class="c-o-light mb-1">Any type of group project could have a central idea. Transfer information using the theme so that members of your team can comprehend it.</span>`,
+    date: '05th Feb, 2024',
+    time: '8 days ago',
+    total_member: 12,
+    members: [
+      { name: 'Sarah Wilson', profile: 'assets/images/dashboard-11/user/11.jpg' },
+      { name: 'Richard Taylor', profile: 'assets/images/dashboard-11/user/9.jpg' },
+      { name: 'Manuel Gilmore' },
+      { name: 'Jessica Anderson', profile: 'assets/images/dashboard-11/user/3.jpg' },
+    ]
+  }
+]
+
+export const activityColors: string[] = ['primary', 'warning'];
+
+export const userDetailsTab: Tabs[] = [
+  {
+    id: 1,
+    title: 'Recent Activity',
+    value: 'activity',
+    icon: 'fa-solid fa-timeline'
+  },
+  {
+    id: 2,
+    title: 'Tasks',
+    value: 'task',
+    icon: 'fa-solid fa-list-check'
+  },
+  {
+    id: 3,
+    title: 'Notifications',
+    value: 'notification',
+    icon: 'fa-regular fa-bell'
+  },
+  {
+    id: 4,
+    title: 'Settings',
+    value: 'setting',
+    icon: 'fa-solid fa-gears'
+  }
+]
+
+export const notifications: Notification[] = [
+  {
+    id: 1,
+    user_profile: 'assets/images/dashboard-11/user/12.jpg',
+    title: 'Weekly check-in session arranged',
+    description: 'August 30, 2024 at 10:00 AM has been set aside for the weekly check-in meeting.',
+    time: '2h ago',
+    date: new Date().toLocaleDateString('en-GB', { day: '2-digit', month: 'short' })
+  },
+  {
+    id: 2,
+    user_profile: 'assets/images/dashboard-11/user/1.jpg',
+    title: 'Finishing the wireframing phase',
+    description: 'High-fidelity mockups will be created by the design team.',
+    time: '5h ago',
+    date: new Date().toLocaleDateString('en-GB', { day: '2-digit', month: 'short' })
+  },
+  {
+    id: 3,
+    user_profile: 'assets/images/dashboard-11/user/5.jpg',
+    title: 'Customer input received',
+    description: 'Before august 25, 2024, the design team will deliver updated mockups.',
+    time: '10h ago',
+    date: new Date().toLocaleDateString('en-GB', { day: '2-digit', month: 'short' })
+  },
+  {
+    id: 4,
+    user_profile: 'assets/images/dashboard-11/user/2.jpg',
+    title: 'Scheduled usability testing',
+    description: 'We will collect user input and fix any problems found during the testing process.',
+    date: '21 Jan'
+  },
+  {
+    id: 5,
+    user_profile: 'assets/images/dashboard-11/user/4.jpg',
+    title: 'Meeting for the final client review',
+    description: 'Reviewing the finished website and making any final tweaks before its official debut is the aim of the meeting.',
+    date: '21 Jan'
+  },
+  {
+    id: 6,
+    user_profile: 'assets/images/dashboard-11/user/7.jpg',
+    title: 'Confirmed date of website launch',
+    description: 'Plans are in place to guarantee a successful and seamless launch.Keep checking back for further information.',
+    date: '18 Feb'
+  }
+]
+
+export const languages: Select2Data = [
+  {
+    value: 'english',
+    label: 'English'
+  },
+  {
+    value: 'french',
+    label: 'French'
+  },
+  {
+    value: 'gujarati',
+    label: 'Gujarati'
+  },
+  {
+    value: 'hindi',
+    label: 'Hindi'
+  },
+  {
+    value: 'japanese',
+    label: 'Japanese'
+  },
+  {
+    value: 'marathi',
+    label: 'Marathi'
+  },
+  {
+    value: 'russian',
+    label: 'Russian'
+  }
+]
+
+export const roles: Role[] = [
+  {
+    id: 1,
+    role: 'Admin',
+    creation_date: '10 Feb 2023, 01:12 PM',
+    last_update_date: '15 Feb 2024, 08:21 AM',
+    status: 'pending',
+  },
+  {
+    id: 2,
+    role: 'Community Manager',
+    creation_date: '05 Mar 2024, 04:30 PM',
+    last_update_date: '20 Apr 2024, 11:20 AM',
+    status: 'active',
+  },
+  {
+    id: 3,
+    role: 'Consumer',
+    creation_date: '21 Aug 2024, 11:18 PM',
+    last_update_date: '05 Sep 2024, 06:25 AM',
+    status: 'pending',
+  },
+  {
+    id: 4,
+    role: 'Content Editors',
+    creation_date: '16 Apr 2024, 09:18 PM',
+    last_update_date: '17 May 2024, 08:00 AM',
+    status: 'active',
+  },
+  {
+    id: 5,
+    role: 'Registered Users',
+    creation_date: '25 Dec 2024, 07:12 AM',
+    last_update_date: '28 Jan 2024, 11:20 AM',
+    status: 'active',
+  },
+  {
+    id: 6,
+    role: 'Subscribers',
+    creation_date: '14 May 2024, 05:25 AM',
+    last_update_date: '22 Jun 2024, 10:12 AM',
+    status: 'active',
+  },
+  {
+    id: 7,
+    role: 'Translator',
+    creation_date: '29 Feb 2024, 08:30 AM',
+    last_update_date: '02 Mar 2024, 10:30 PM',
+    status: 'active',
+  },
+  {
+    id: 8,
+    role: 'Unverified Users',
+    creation_date: '18 Dec 2023, 09:00 PM',
+    last_update_date: '20 Jan 2024, 05:05 PM',
+    status: 'active',
+  },
+  {
+    id: 9,
+    role: 'Vendor',
+    creation_date: '13 Jan 2024, 06:45 AM',
+    last_update_date: '15 Feb 2024, 04:20 AM',
+    status: 'active',
   }
 ]
 

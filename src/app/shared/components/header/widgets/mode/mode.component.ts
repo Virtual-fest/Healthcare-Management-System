@@ -17,7 +17,7 @@ export class ModeComponent {
 
   constructor(private layout: LayoutService){
     
-    this.dark = this.layout.config.settings.layout_version == 'dark-only';
+    this.dark = this.layout.config.settings.layout_version == 'dark-only' ? true : false;
     
     if(this.layoutVersion != null){
       this.layout.config.settings.layout_version = this.layoutVersion;

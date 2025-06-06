@@ -6,26 +6,16 @@ import { FullComponent } from './shared/components/layout/full/full.component';
 import { AdminGuard } from './shared/guard/admin.guard';
 import { content } from './shared/routes/content.routes';
 import { full } from './shared/routes/full.routes';
-import {RegisterComponent} from "./auth/register/register.component";
-import {ResetPasswordComponent} from "./auth/reset-password/reset-password.component";
 
 export const routes: Routes = [
     {
         path: '',
-        redirectTo: '/sample-page',
+        redirectTo: '/dashboard/default',
         pathMatch: 'full'
     },
     {
         path: 'auth/login',
         component: LoginComponent,
-    },
-    {
-        path: 'auth/register',
-        component: RegisterComponent,
-    },
-    {
-        path: 'auth/forgot-password',
-        component: ResetPasswordComponent,
     },
     {
         path: '',

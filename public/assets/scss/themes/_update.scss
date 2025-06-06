@@ -427,6 +427,8 @@
 .thumb-swiper-wrapper {
   .swiper {
     width: 100%;
+    height: 100%;
+    width: 100%;
     height: 300px;
     margin-left: auto;
     margin-right: auto;
@@ -445,6 +447,8 @@
       @include pixelstrap-size(100%, 100%);
       width: 100%;
       height: 100%;
+      object-fit: cover;
+      display: block;
       object-fit: cover;
     }
   }
@@ -666,7 +670,7 @@
         align-items: center;
         background-color: $primary-color;
         color: $white;
-        border-radius: 0 0 0 3px;
+        border-radius: 0px 0 0 3px;
         position: absolute;
         left: 0;
         top: 0;
@@ -862,13 +866,13 @@
     position: fixed;
     right: 10px;
     bottom: 10px;
-    text-shadow: 0 0 0 #1e2832;
+    text-shadow: 0px 0px 0px #1e2832;
     transition: all 0.3s;
   }
 
   #sign:hover {
     color: #1e2832;
-    text-shadow: 0 0 5px #1e2832;
+    text-shadow: 0px 0px 5px #1e2832;
   }
 }
 
@@ -1213,7 +1217,7 @@
             .square-white {
               @include square-box(34px, 34px, 2px, var(--white));
               @include pixelstrap-flex(flex, center, center);
-              box-shadow: 0 0 28px 6px rgba(235, 235, 235, 0.4);
+              box-shadow: 0px 0px 28px 6px rgba(235, 235, 235, 0.4);
 
               svg {
                 fill: rgba($badge-light-color, 0.8);
@@ -1359,7 +1363,7 @@
         }
 
         @media (max-width: 991px) {
-          padding-left: 0;
+          padding-left: 0px;
         }
       }
 
@@ -1510,7 +1514,7 @@
       @media (max-width: 575px) {
         flex-direction: column;
         display: flex;
-        top: 0;
+        top: 0px;
         right: unset;
       }
     }
@@ -1556,7 +1560,7 @@
               .square-white {
                 @include square-box(34px, 34px, 2px, var(--white));
                 @include pixelstrap-flex(flex, center, center);
-                box-shadow: 0 0 28px 6px rgba(235, 235, 235, 0.4);
+                box-shadow: 0px 0px 28px 6px rgba(235, 235, 235, 0.4);
 
                 i {
                   color: rgba($badge-light-color, 0.8);
@@ -1611,8 +1615,8 @@
 }
 .theme-form {
   .form-control-plaintext {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
   }
   .input-group {
     position: relative;
@@ -1621,8 +1625,8 @@
     align-items: stretch;
     width: 100%;
     span {
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
     }
   }
 }
@@ -1640,6 +1644,7 @@
     padding: var(--tw-nav-link-padding-y) var(--tw-nav-link-padding-x);
     font-size: var(--tw-nav-link-font-size);
     font-weight: var(--tw-nav-link-font-weight);
+    color: $color_1;
     text-decoration: none;
     background: 0 0;
     border: 0;
@@ -2004,7 +2009,7 @@ table {
 .api-management {
   @media (max-width: 576px) {
     .dataTables_filter {
-      top: 0;
+      top: 0px;
       left: 20px;
     }
   }

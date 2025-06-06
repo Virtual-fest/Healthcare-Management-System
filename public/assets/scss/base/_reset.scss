@@ -2832,7 +2832,13 @@ body:has(.offcanvas.show) {
     }
   }
 }
-
+.leaflet-container {
+  &.leaflet-touch-drag {
+    &.leaflet-touch-zoom {
+      z-index: 2;
+    }
+  }
+}
 .card-header-right-btn {
   padding: 9px 11px;
   border-radius: 5px;

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "healthcare-management-system": {
+    "cuba-tailwind-angular": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -19,8 +19,12 @@
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "allowedCommonJsDependencies": [
+              "leaflet",
               "sweetalert2",
-              "feather-icons"
+              "feather-icons",
+              "masonry-layout",
+              "dropzone",
+              "apexcharts"
             ],
             "stylePreprocessorOptions": {
               "sass": {
@@ -32,11 +36,12 @@
                 ]
               }
             },
-            "outputPath": "dist/healthcare-management-system",
+            "outputPath": "dist/cuba-tailwind-angular",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
-              "zone.js"
+              "zone.js",
+              "@angular/localize/init"
             ],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
@@ -44,10 +49,16 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "**/*",
+                "input": "node_modules/@kolkov/angular-editor/assets/icons",
+                "output": "assets/ae-icons/"
               }
             ],
             "styles": [
               "src/styles.scss",
+              "node_modules/ngx-toastr/toastr.css",
               "node_modules/ngx-spinner/animations/ball-clip-rotate.css",
               "node_modules/ngx-spinner/animations/ball-fall.css",
               "node_modules/ngx-spinner/animations/ball-spin-clockwise.css"
@@ -82,10 +93,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "healthcare-management-system:build:production"
+              "buildTarget": "cuba-tailwind-angular:build:production"
             },
             "development": {
-              "buildTarget": "healthcare-management-system:build:development"
+              "buildTarget": "cuba-tailwind-angular:build:development"
             }
           },
           "defaultConfiguration": "development"

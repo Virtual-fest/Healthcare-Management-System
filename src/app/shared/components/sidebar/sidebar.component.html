@@ -12,6 +12,11 @@
     </div>
 
     <nav class="sidebar-main">
+        @if(leftArrow){
+            <div class="left-arrow" (click)="scrollLeft()">
+              <app-feather-icon [icon]="'arrow-left'"></app-feather-icon>
+            </div>
+          }
         <div id="sidebar-menu" [ngStyle]="{ 'margin-left': layoutService.margin + 'px' }">
             <ul class="sidebar-links sidebar-scroll" id="simple-bar" #sidebar>
                 <li class="back-btn">    
@@ -34,7 +39,7 @@
                     @if(menu.main_title) {
                         <li class="sidebar-main-title">
                             <div>
-                              <h6 class="lan-1">{{ menu.main_title  }}</h6>
+                              <h6 class="lan-1">{{ menu.main_title | translate }}</h6>
                             </div>
                         </li>
                     } @else {
@@ -51,7 +56,7 @@
 
                                 @if(menu.type == 'extTabLink'){
                                     <a [href]="menu.path" target="_blank">
-                                      {{ menu.title }}
+                                      {{ menu.title | translate }}
                                     </a>
                                 } @else {
                                     <a 
@@ -65,9 +70,9 @@
                                         }
 
                                         @if(menu.level == 1) {
-                                            <span>{{ menu.title }} </span>
+                                            <span>{{ menu.title | translate }} </span>
                                         } @else {
-                                            {{ menu.title }}
+                                            {{ menu.title | translate }}
                                         }
 
                                         @if(menu.children) {
@@ -91,5 +96,8 @@
                 }
             </ul>
         </div>
+        @if(rightArrow){
+            <div class="right-arrow" (click)="scrollRight()"><app-feather-icon [icon]="'arrow-right'"></app-feather-icon></div>
+        }
     </nav>
 </div>

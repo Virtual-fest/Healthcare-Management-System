@@ -3,11 +3,17 @@ import { Component } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { CardComponent } from "../../../../../shared/components/ui/card/card.component";
+import { CompletedComponent } from "../../../../e-commerce/checkout/widgets/completed/completed.component";
+import { InformationComponent } from "../../../../e-commerce/checkout/widgets/information/information.component";
+import { PaymentComponent } from "../../../../e-commerce/checkout/widgets/payment/payment.component";
+import { ShippingComponent } from "../../../../e-commerce/checkout/widgets/shipping/shipping.component";
 import { productDetails, productTotal, shippingForm } from '../../../../../shared/data/form-layout';
 
 @Component({
   selector: 'app-shipping-form',
-  imports: [CommonModule, FormsModule, ReactiveFormsModule, CardComponent],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule,
+            InformationComponent, ShippingComponent, PaymentComponent,
+            CompletedComponent, CardComponent],
   templateUrl: './shipping-form.component.html',
   styleUrl: './shipping-form.component.scss'
 })

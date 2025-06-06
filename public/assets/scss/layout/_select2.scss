@@ -63,7 +63,7 @@
     .dz-details {
       opacity: 1;
       top: 0;
-      padding: 10px 0 0;
+      padding: 10px 0px 0px;
       left: 0;
       text-align: left;
       z-index: 1;
@@ -644,6 +644,7 @@
 
 .selected-box {
   background: var(--light2);
+  color: $color_1;
   position: relative;
   order: 0;
   padding: 12px 24px;

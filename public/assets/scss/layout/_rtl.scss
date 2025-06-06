@@ -68,6 +68,16 @@ html[dir="rtl"] {
       }
     }
   }
+  .arrow-round {
+    .swiper {
+      .owl-carousel {
+        .owl-nav{
+          left: 20px;
+          right: unset;
+        }
+      }
+    }
+  }
   .language-header{
     .main{
       left: 20px;
@@ -2362,6 +2372,18 @@ html[dir="rtl"] {
 
   .owl-carousel {
     direction: ltr;
+  }
+
+  .swiper {
+    direction: ltr;
+
+    .swiper-wrapper {
+      .swiper-slide {
+        > * {
+          direction: rtl;
+        }
+      }
+    }
   }
 
   .btn-group {
@@ -5822,6 +5844,15 @@ html[dir="rtl"] {
         i {
           transform: scaleX(-1);
         }
+      }
+    }
+  }
+
+  .arrow-round {
+    .swiper-button-next,
+    .swiper-button-prev {
+      &::after {
+        transform: scaleX(-1);
       }
     }
   }

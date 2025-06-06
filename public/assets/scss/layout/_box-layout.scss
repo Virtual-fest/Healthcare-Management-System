@@ -1063,6 +1063,22 @@
       }
     }
 
+    .birthday-cards {
+      .swiper {
+        margin-block: 50px;
+
+        .swiper-slide {
+          .birthday-usercard {
+            .btn-user {
+              img {
+                height: 55px;
+              }
+            }
+          }
+        }
+      }
+    }
+
     .project-analytics {
       .analytics-data {
         .balance-data {
@@ -2114,6 +2130,14 @@
       }
 
       img {
+        height: 295px;
+      }
+    }
+
+    // Owl-carousel
+    .swiper {
+      &.swiper-h,
+      &.vertical-swiper {
         height: 295px;
       }
     }

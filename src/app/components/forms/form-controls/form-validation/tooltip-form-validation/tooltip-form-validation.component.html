@@ -3,7 +3,7 @@
     If your form layout allows it, you can swap the <code>&#123;valid|invalid&#125;-tooltip </code>
     classes for <code>&#123;valid|invalid&#125;-tooltip </code>classes to display validation tooltip in a styled
     tooltip. Be sure to have a parent with position: relative on it for tooltip positioning.</p>
-    <form class="grid grid-cols-12 gap-4 needs-validation custom-input" [formGroup]="tooltipForm" (ngSubmit)="submitForm()">
+    <form class="grid grid-cols-12 gap-4 needs-validation custom-input" [formGroup]="tooltipForm"(ngSubmit)="submitForm()">
       <div class="col-span-4 md:col-span-12 position-relative">
         <label class="form-label" for="validationTooltip01">First Name</label>
         <input class="form-control" id="validationTooltip01" type="text" placeholder="Mark" formControlName="firstName"
