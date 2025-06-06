@@ -1,8 +1,8 @@
 import { Component, EventEmitter, HostListener, Input, Output } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { Product } from '../../../../interface/product';
 import { OutsideDirective } from '../../../../directives/outside.directive';
+import {Product} from "../../../../interface/product";
 
 @Component({
   selector: 'app-product-details-modal',

@@ -1,9 +1,4 @@
-export interface AbsoluteCard {
-  bg_color: string;
-  heading: string;
-  img: string;
-  text: string;
-}
+
 
 export interface AnimatedTimeline {
   year: number;
@@ -32,15 +27,6 @@ export interface Details {
   class?: string;
 }
 
-export interface Images {
-  image: string;
-}
-
-export interface DarkVariant {
-  img: string;
-  title: string;
-  description: string;
-}
 
 export interface List {
   title: string;

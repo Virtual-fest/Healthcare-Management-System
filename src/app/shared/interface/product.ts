@@ -1,9 +1,5 @@
 import { SafeHtml } from "@angular/platform-browser";
 
-export interface Products {
-  product: Product[]
-}
-
 export interface Product {
   id: number;
   image: string;

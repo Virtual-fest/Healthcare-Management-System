@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { ToastrService } from 'ngx-toastr';
 
 import { CardComponent } from "../../../shared/components/ui/card/card.component";
 import { flagIcon } from '../../../shared/data/icons/flag-icon';
@@ -19,7 +18,6 @@ export class FlagIconComponent {
   public flag: string;
   public val: string;
 
-  constructor(private toast: ToastrService){}
 
   getDetails(value: string){
     this.details = true;
@@ -39,14 +37,6 @@ export class FlagIconComponent {
     selBox.select();
     document.execCommand('copy');
     document.body.removeChild(selBox);
-
-    this.toast.show("Code Copied to clipboard!", "",
-    {
-      positionClass: 'toast-bottom-right',
-      closeButton: true,
-      toastClass: "alert alert-copy notify-alert",
-      timeOut: 1000
-    })
   }
 
 }

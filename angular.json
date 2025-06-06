@@ -20,7 +20,7 @@
           "options": {
             "allowedCommonJsDependencies": [
               "sweetalert2",
-              "feather-icons",
+              "feather-icons"
             ],
             "stylePreprocessorOptions": {
               "sass": {
@@ -36,7 +36,7 @@
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
-              "zone.js",
+              "zone.js"
             ],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
@@ -44,16 +44,10 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              },
-              {
-                "glob": "**/*",
-                "input": "node_modules/@kolkov/angular-editor/assets/icons",
-                "output": "assets/ae-icons/"
               }
             ],
             "styles": [
               "src/styles.scss",
-              "node_modules/ngx-toastr/toastr.css",
               "node_modules/ngx-spinner/animations/ball-clip-rotate.css",
               "node_modules/ngx-spinner/animations/ball-fall.css",
               "node_modules/ngx-spinner/animations/ball-spin-clockwise.css"

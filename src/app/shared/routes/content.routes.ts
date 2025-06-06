@@ -2,13 +2,6 @@ import { Routes } from "@angular/router";
 
 export const content: Routes = [
     {
-        path: 'user',
-        loadChildren: () => import('../../components/users/users.routes').then(r => r.users),
-        data: {
-            breadcrumb: "User"
-        }
-    },
-    {
         path: 'reports',
         loadChildren: () => import('../../components/reports/reports.routes').then(r => r.reports),
         data: {

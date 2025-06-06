@@ -6,10 +6,3 @@ export interface TodoSidebar {
     color: string;
     count?: number;
 }
-
-export interface Todo {
-    id: number;
-    task: string;
-    status: string;
-    date: string;
-}
