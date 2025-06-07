@@ -3,26 +3,35 @@
     <p>Enter your email & password to login</p>
     <div class="form-group needs-validation custom-input">
         <label class="form-label" for="validationTooltip01">Email Address</label>
-        <input class="form-control" id="validationTooltip01" type="email" placeholder="test@gmail.com"
-               [formControlName]="'email'" autocomplete="false"
-               [ngClass]="{ 'is-invalid' : loginForm.controls['email'].touched &&
-        loginForm.controls['email'].errors?.['required'] , 'is-valid' : loginForm.controls['email'].valid}">
-        @if (loginForm.controls['email'].valid) {
-            <div class="valid-tooltip">Looks's Good!</div>
-        }
-        @if (loginForm.controls['email'].touched && loginForm.controls['email'].errors?.['required'] && loginForm.controls['email'].errors?.['email']) {
-            <div class="invalid-tooltip">Please provide a valid Email.</div>
+        <input
+                class="form-control"
+                id="validationTooltip01"
+                type="email"
+                placeholder="test@gmail.com"
+                formControlName="email"
+                autocomplete="off"
+                [ngClass]="{
+                  'is-invalid': loginForm.controls['email'].touched && loginForm.controls['email'].invalid,
+                  'is-valid': loginForm.controls['email'].valid
+                }"
+        />
+        @if (loginForm.controls['email'].touched && loginForm.controls['email'].invalid) {
+            <div class="invalid-tooltip">
+                @if (loginForm.controls['email'].errors?.['required']) {
+                    Please provide your email.
+                } @else if (loginForm.controls['email'].errors?.['email']) {
+                    Please provide a valid email address.
+                }
+            </div>
         }
     </div>
+
     <div class="form-group needs-validation custom-input">
         <label class="form-label" for="validationTooltip02">Email Password</label>
         <input class="form-control" id="validationTooltip02" type="text" name="login[password]" placeholder="*********"
                [formControlName]="'password'" autocomplete="false"
                [ngClass]="{ 'is-invalid' : loginForm.controls['password'].touched &&
         loginForm.controls['password'].errors?.['required'] , 'is-valid' : loginForm.controls['password'].valid}">
-        @if (loginForm.controls['password'].valid) {
-            <div class="valid-tooltip">Looks's Good!</div>
-        }
         @if (loginForm.controls['password'].touched && loginForm.controls['password'].errors?.['required']) {
             <div class="invalid-tooltip">Password is required.</div>
         }

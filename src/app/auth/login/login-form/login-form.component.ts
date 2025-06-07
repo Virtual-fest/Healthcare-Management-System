@@ -44,16 +44,17 @@ export class LoginFormComponent {
           name: "test user",
         };
         localStorage.setItem("user", JSON.stringify(user));
-        Swal.fire({
-          title: 'Signed in successfully',
-          icon: 'success',
-          toast: true,
-          position: 'top-end',
-          showConfirmButton: false,
-          timer: 3000,
-          timerProgressBar: true,
-        })
-        this.router.navigate(["/sample-page"]).then();
+        this.router.navigate(["/sample-page"]).then(() => {
+          Swal.fire({
+            title: 'Signed in successfully',
+            icon: 'success',
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+          }).then()
+        });
       } else {
         Swal.fire({
           title: 'Please Enter valid email or password...!',
@@ -63,7 +64,7 @@ export class LoginFormComponent {
           showConfirmButton: false,
           timer: 3000,
           timerProgressBar: true,
-        })
+        }).then()
       }
     }
   }
