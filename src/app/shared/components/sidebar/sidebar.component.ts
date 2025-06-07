@@ -87,6 +87,11 @@ export class SidebarComponent {
     });
   }
 
+  /**
+   * Toggles the active state of a menu item.
+   * If activating, deactivate all other menu items and their submenus.
+   * @param item Menu item to toggle.
+   */
   toggleMenu(item: Menu) {
     if (!item.active) {
       this.menuItems.forEach((menu) => {
@@ -140,35 +145,40 @@ export class SidebarComponent {
     this.layoutService.closeSidebar = true;
   }
 
-  pined(item: Menu) {
+  /**
+   * Toggles the pinned state of a menu item.
+   * If the item is not pinned, pins it and adds to pinedItem.
+   * If already pinned, unpins and removes from pinedItem.
+   * Scroll the item into view after toggling.
+   * @param item Menu item to pin or unpin.
+   */
+  pined(item: Menu): void {
     if (!item.pined) {
-      this.menuItems.filter((details) => {
-        if (details.title) {
-          if (this.menuItems.includes(item)) {
-            item.pined = true;
-            if (!this.pinedItem.includes(item)) {
-              this.pinedItem.push(item);
-            }
-          }
-        }
-      })
+      item.pined = true;
+      if (!this.pinedItem.includes(item)) {
+        this.pinedItem.push(item);
+      }
     } else {
       item.pined = false;
-      this.pinedItem.splice(this.pinedItem.indexOf(item), 1)
-    }
-
-    this.scroll(item)
-  }
-
-  scroll(item: Menu) {
-    if(item && item.id) {
-      const scrollDiv = document.getElementById(item.id);
-      if(scrollDiv) {
-        setTimeout(() => {
-          scrollDiv.scrollIntoView({ behavior: 'smooth', block: 'start' })
-        }, 100);
+      const idx = this.pinedItem.indexOf(item);
+      if (idx !== -1) {
+        this.pinedItem.splice(idx, 1);
       }
     }
+    this.scroll(item);
   }
 
+  /**
+   * Smoothly scrolls the sidebar menu item into view if it exists.
+   * @param item Menu item with an 'id' property corresponding to a DOM element's id.
+   */
+  scroll(item: Menu): void {
+    if (!item?.id) return;
+    const scrollDiv = document.getElementById(item.id);
+    if (scrollDiv) {
+      setTimeout(() => {
+        scrollDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 100);
+    }
+  }
 }

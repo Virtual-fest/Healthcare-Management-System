@@ -20,51 +20,41 @@ export class ContentComponent {
 
   public layout: string;
 
-  constructor(public layoutService: LayoutService, private route: ActivatedRoute) {
+  constructor(
+    public layoutService: LayoutService,
+    private route: ActivatedRoute
+  ) {
     this.layout = this.layoutService.config.settings.layout;
-    
-    this.route.queryParams.subscribe((params) => {
-      this.layout = params['layout'];
 
-      if(this.layout) {
+    this.route.queryParams.subscribe(params => {
+      const newLayout = params['layout'];
+      if (newLayout) {
+        this.layout = newLayout;
         localStorage.setItem('layout', this.layout);
         this.layoutService.config.settings.layout = this.layout;
         this.layoutService.applyLayout(this.layout);
       }
     });
 
-    if(window.innerWidth < 1200){
-      this.layoutService.closeSidebar = true;
-    }else {
-      this.layoutService.closeSidebar = false;
-    }
-
-    if(window.innerWidth <= 992){
+    const width = window.innerWidth;
+    this.layoutService.closeSidebar = width < 1200;
+    if (width <= 992) {
       this.layoutService.config.settings.sidebar_type = 'compact-wrapper';
-    }else{
-      if(this.layout) {
-        this.layoutService.applyLayout(this.layout);
-      } else {
-        this.layoutService.config.settings.sidebar_type = this.layoutService.config.settings.sidebar_type;
-      }
+    } else if (this.layout) {
+      this.layoutService.applyLayout(this.layout);
     }
   }
+ 
+  @HostListener('window:resize')
+  onResize(): void {
+    const width = window.innerWidth;
 
-  @HostListener('window:resize', ['$event'])
-  onResize() {
-    if(window.innerWidth < 1200){
-      this.layoutService.closeSidebar = true;
-    }else {
-      this.layoutService.closeSidebar = false;
-    }
-    if(window.innerWidth <= 992){
+    this.layoutService.closeSidebar = width < 1200;
+
+    if (width <= 992) {
       this.layoutService.config.settings.sidebar_type = 'compact-wrapper';
-    }else{
-      if(this.layout) {
-        this.layoutService.applyLayout(this.layout);
-      } else {
-        this.layoutService.config.settings.sidebar_type = this.layoutService.config.settings.sidebar_type;
-      }
+    } else if (this.layout) {
+      this.layoutService.applyLayout(this.layout);
     }
   }
 }

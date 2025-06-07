@@ -3,6 +3,9 @@ import {Menu} from "../interface/menu";
 
 export const menuItems: Menu[] = [
   {
+    main_title: 'components'
+  },
+  {
     title: 'Reports',
     id: 'reports',
     icon: 'reports',
@@ -21,9 +24,6 @@ export const menuItems: Menu[] = [
     type: 'link',
     path: '/calendar',
     level: 1,
-  },
-  {
-    main_title: "forms_and_table"
   },
   {
     title: 'Forms',
@@ -77,9 +77,6 @@ export const menuItems: Menu[] = [
         ],
       }
     ]
-  },
-  {
-    main_title: 'components'
   },
   {
     title: 'Bonus Ui',
