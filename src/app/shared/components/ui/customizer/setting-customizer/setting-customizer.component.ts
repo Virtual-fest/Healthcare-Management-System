@@ -1,7 +1,6 @@
 import {CommonModule} from '@angular/common';
 import {Component, EventEmitter, Output} from '@angular/core';
 import {FormsModule} from '@angular/forms';
-import {ActivatedRoute, Router} from '@angular/router';
 
 import {LayoutService} from '../../../../services/layout.service';
 
@@ -13,7 +12,16 @@ import {LayoutService} from '../../../../services/layout.service';
 })
 
 export class SettingCustomizerComponent {
-
+  layoutTypes = [
+    { value: 'ltr', label: 'LTR', class: '' },
+    { value: 'rtl', label: 'RTL', class: '' },
+    { value: 'box', label: 'Box', class: 'box-layout px-3' }
+  ];
+  
+  iconOptions = [
+    { value: 'stroke-svg', label: 'Stroke' },
+    { value: 'fill-svg', label: 'Fill' }
+  ];
   @Output() settingOpen = new EventEmitter();
 
   public sidebarType = localStorage.getItem('sidebar_type');
@@ -23,7 +31,7 @@ export class SettingCustomizerComponent {
   public layoutVersion: string = localStorage.getItem('layout_version') || 'light-only';
   public layoutType: string = localStorage.getItem('layout_type') || 'ltr';
 
-  constructor(public layoutService: LayoutService, private router: Router, private route: ActivatedRoute){
+  constructor(public layoutService: LayoutService){
     if(this.sidebarType != null && this.layoutService.config.settings.layout === ''){
       this.layoutService.config.settings.sidebar_type = this.sidebarType;
     }
@@ -69,30 +77,30 @@ export class SettingCustomizerComponent {
     this.settingOpen.emit(false);
   }
 
-  handleSidebarType(value: string){
-    if(value == 'horizontal'){
-      if(window.innerWidth <= 992){
-        this.layoutService.config.settings.sidebar_type = 'compact-wrapper';
-        localStorage.setItem('sidebar_type','compact-wrapper')
-      }else{
-        this.layoutService.config.settings.sidebar_type = 'horizontal-wrapper ';
-        localStorage.setItem('sidebar_type','horizontal-wrapper');
-      }
-    }else if(value == 'vertical'){
-      this.layoutService.margin = 0;
-      this.layoutService.config.settings.layout = 'dubai';
-      localStorage.setItem('layout', 'dubai');
-      this.layoutService.config.settings.sidebar_type = 'compact-wrapper';
-      localStorage.setItem('sidebar_type','compact-wrapper')
-
-      this.router.navigate([], {
-        relativeTo: this.route,
-        // queryParams: {layout: 'dubai'},
-        // queryParamsHandling: 'merge'
-      }).then()
-     }
-    window.location.reload();
-  }
+  // handleSidebarType(value: string){
+  //   if(value == 'horizontal'){
+  //     if(window.innerWidth <= 992){
+  //       this.layoutService.config.settings.sidebar_type = 'compact-wrapper';
+  //       localStorage.setItem('sidebar_type','compact-wrapper')
+  //     }else{
+  //       this.layoutService.config.settings.sidebar_type = 'horizontal-wrapper ';
+  //       localStorage.setItem('sidebar_type','horizontal-wrapper');
+  //     }
+  //   }else if(value == 'vertical'){
+  //     this.layoutService.margin = 0;
+  //     this.layoutService.config.settings.layout = 'dubai';
+  //     localStorage.setItem('layout', 'dubai');
+  //     this.layoutService.config.settings.sidebar_type = 'compact-wrapper';
+  //     localStorage.setItem('sidebar_type','compact-wrapper')
+  //
+  //     this.router.navigate([], {
+  //       relativeTo: this.route,
+  //       // queryParams: {layout: 'dubai'},
+  //       // queryParamsHandling: 'merge'
+  //     }).then()
+  //    }
+  //   window.location.reload();
+  // }
 
   changeIcon(value: string){
     this.icon = value;

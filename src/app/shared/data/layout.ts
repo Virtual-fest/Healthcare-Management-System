@@ -9,24 +9,18 @@ export const layouts: Layout[] = [
     },
     {
         id: 2,
-        title: 'Los Angeles',
-        image: 'assets/images/landing/layout-images/los-angle.png',
-        slug: 'los-angeles'
-    },
-    {
-        id: 3,
         title: 'Singapore',
         image: 'assets/images/landing/layout-images/singapore.jpg',
         slug: 'singapore'
     },
     {
-        id: 4,
+        id: 3,
         title: 'New York',
         image: 'assets/images/landing/layout-images/newyork.png',
         slug: 'newyork'
     },
     {
-        id: 5,
+        id: 4,
         title: 'Seoul',
         image: 'assets/images/landing/layout-images/dubai.jpg',
         slug: 'seoul'

@@ -494,10 +494,10 @@ $background-color: $primary-color, $secondary-color, $success-color,
 
   // Box-shadow
   .shadow-10-#{$var} {
-    box-shadow: 0px
+    box-shadow: 0
       5.04px
       14.96px
-      0px
+      0
       rgba(nth($background-color, $i), 0.25)
       inset;
   }
@@ -1808,7 +1808,7 @@ table {
       left: 3px;
     }
     .dataTables_filter {
-      right: 0px;
+      right: 0;
       label {
         input {
           padding: 4px;
@@ -1984,7 +1984,6 @@ table.dataTable {
       margin: 10px;
       padding: 12px 10px;
       border: 1px solid $gray-60;
-      border-radius: 4px;
       border-radius: 6px;
     }
     .dropdown-list {
@@ -2158,12 +2157,12 @@ figure {
   &.right {
     &::before {
       top: 50%;
-      left: 0px;
+      left: 0;
     }
   }
   &.bottom {
     &::before {
-      top: 0px;
+      top: 0;
       left: 50%;
     }
   }
@@ -2398,7 +2397,7 @@ figure {
       font-size: 14px;
       width: auto !important;
       z-index: 1 !important;
-      top: 0px;
+      top: 0;
       &.dz-image-preview {
         background-color: transparent;
       }
@@ -2435,7 +2434,6 @@ figure {
         }
       }
       .dz-success-mark {
-        display: none;
         position: absolute;
         width: 40px;
         height: 40px;
@@ -2454,7 +2452,6 @@ figure {
         }
       }
       .dz-error-mark {
-        display: none;
         position: absolute;
         width: 40px;
         height: 40px;
@@ -2484,20 +2481,15 @@ figure {
           top: 0;
           bottom: 0;
           left: 0;
-          width: 0%;
           background-color: #8cc657;
           animation: loading 0.4s linear infinite;
           transition: width 0.3s ease-in-out;
           border-radius: 2px;
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 0%;
+          width: 0;
           height: 100%;
         }
       }
       .dz-error-message {
-        display: none;
         position: absolute;
         top: -5px;
         left: -20px;
@@ -2736,7 +2728,7 @@ lib-ngx-image-zoom {
         position: absolute;
         right: unset !important;
         left: 0;
-        margin: 0px;
+        margin: 0;
       }
     }
     &:last-child {
@@ -2744,7 +2736,7 @@ lib-ngx-image-zoom {
         position: absolute;
         right: unset !important;
         left: 0;
-        margin: 0px;
+        margin: 0;
       }
     }
   }

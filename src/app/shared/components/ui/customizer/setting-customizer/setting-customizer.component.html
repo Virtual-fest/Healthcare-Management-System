@@ -17,10 +17,12 @@
 <div class="customizer-body custom-scrollbar">
   <h6>Layout Type</h6>
   <ul class="layout-grid main-layout">
-    <li
-      [class.active]="layoutService.config.settings.layout_type == 'ltr'"
-      data-attr="ltr"
-      (click)="handleLayoutType('ltr')"
+    @for (layout of layoutTypes; track layout.value) {
+      <li 
+      [class.active]="layoutService.config.settings.layout_type == layout.value"
+      [attr.data-attr]="layout.value"
+      (click)="handleLayoutType(layout.value)"
+      [ngClass]="layout.class"
     >
       <div class="bg-light header">
         <ul>
@@ -31,88 +33,24 @@
       </div>
       <div class="body">
         <ul>
-          <li class="bg-light sidebar"></li>
+          <li
+            *ngIf="layout.value !== 'rtl'; else rtlSidebar"
+            class="bg-light sidebar"
+          ></li>
           <li class="bg-light body">
-            <span class="badge badge-primary">LTR</span>
+            <span class="badge badge-primary">{{ layout.label }}</span>
           </li>
+          <ng-template #rtlSidebar>
+            <li class="bg-light body">
+              <span class="badge badge-primary">{{ layout.label }}</span>
+            </li>
+            <li class="bg-light sidebar"></li>
+          </ng-template>
         </ul>
       </div>
     </li>
-    <li
-      [class.active]="layoutService.config.settings.layout_type == 'rtl'"
-      data-attr="rtl"
-      (click)="handleLayoutType('rtl')"
-    >
-      <div class="bg-light header">
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </div>
-      <div class="body">
-        <ul>
-          <li class="bg-light body">
-            <span class="badge badge-primary">RTL</span>
-          </li>
-          <li class="bg-light sidebar"></li>
-        </ul>
-      </div>
-    </li>
-    <li
-      class="box-layout px-3"
-      [class.active]="layoutService.config.settings.layout_type == 'box'"
-      (click)="handleLayoutType('box')"
-    >
-      <div class="bg-light header">
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </div>
-      <div class="body">
-        <ul>
-          <li class="bg-light sidebar"></li>
-          <li class="bg-light body">
-            <span class="badge badge-primary">Box</span>
-          </li>
-        </ul>
-      </div>
-    </li>
-  </ul>
-  <h6>Sidebar Type</h6>
-  <ul class="layout-grid sidebar-type">
-    <li data-attr="normal-sidebar" (click)="handleSidebarType('horizontal')">
-      <div class="bg-light header">
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </div>
-      <div class="body">
-        <ul>
-          <li class="sidebar bg-dark"></li>
-          <li class="bg-light body"></li>
-        </ul>
-      </div>
-    </li>
-    <li data-attr="compact-sidebar" (click)="handleSidebarType('vertical')">
-      <div class="bg-light header">
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </div>
-      <div class="body">
-        <ul>
-          <li class="sidebar bg-dark compact"></li>
-          <li class="bg-light body"></li>
-        </ul>
-      </div>
-    </li>
+    }
+  
   </ul>
   <h6>Unlimited Color</h6>
   <ul class="layout-grid unlimited-color-layout">
@@ -120,14 +58,12 @@
       id="ColorPicker1"
       name="Background"
       type="color"
-      value="#7366ff"
       [(ngModel)]="primary"
     />
     <input
       id="ColorPicker2"
       name="Background"
       type="color"
-      value="#838383"
       [(ngModel)]="secondary"
     />
     <button
@@ -141,8 +77,9 @@
   <h6>Sidebar Icon</h6>
   <ul class="layout-grid sidebar-setting">
     <li
-      [ngClass]="{ active: icon == 'stroke-svg' }"
-      (click)="changeIcon('stroke-svg')"
+      *ngFor="let iconOption of iconOptions"
+      [ngClass]="{ active: icon == iconOption.value }"
+      (click)="changeIcon(iconOption.value)"
     >
       <div class="bg-light header">
         <ul>
@@ -152,22 +89,7 @@
         </ul>
       </div>
       <div class="bg-light body">
-        <span class="badge badge-primary">Stroke</span>
-      </div>
-    </li>
-    <li
-      [ngClass]="{ active: icon == 'fill-svg' }"
-      (click)="changeIcon('fill-svg')"
-    >
-      <div class="bg-light header">
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </div>
-      <div class="bg-light body">
-        <span class="badge badge-primary">Fill</span>
+        <span class="badge badge-primary">{{ iconOption.label }}</span>
       </div>
     </li>
   </ul>

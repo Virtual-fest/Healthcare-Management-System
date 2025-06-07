@@ -10,7 +10,7 @@
   @media only screen and (max-width: 1716px) {
     .dashboard-13 {
       .sales-order-chart {
-        margin-top: 0px;
+        margin-top: 0;
       }
     }
   }
@@ -136,7 +136,7 @@
 
           .email-left-aside {
             .card {
-              box-shadow: 0px 9px 20px rgba(46, 35, 94, 0.07);
+              box-shadow: 0 9px 20px rgba(46, 35, 94, 0.07);
               background-color: var(--bs-card-bg);
               border-radius: 15px;
 
@@ -2237,7 +2237,7 @@
     .job-sidebar {
       background-color: var(--white);
       padding: 20px;
-      box-shadow: 0px 9px 20px rgba(46, 35, 94, 0.07);
+      box-shadow: 0 9px 20px rgba(46, 35, 94, 0.07);
       height: 600px;
       overflow-y: auto;
 
@@ -2473,59 +2473,6 @@
             }
           }
         }
-
-        &.compact-small {
-          .page-header {
-            padding-left: 90px;
-
-            &.close_icon {
-              padding-left: 0;
-            }
-
-            .left-header {
-              width: 36%;
-            }
-          }
-
-          .page-body-wrapper {
-            div.sidebar-wrapper {
-              .sidebar-main {
-                .sidebar-links {
-                  li {
-                    .sidebar-submenu {
-                      left: 410px;
-                    }
-                  }
-                }
-              }
-            }
-          }
-
-          &.material-icon {
-            .page-body-wrapper {
-              .page-body {
-                margin-left: 90px;
-                padding-left: 15px;
-
-                .default-dashboard {
-                  .sales-report {
-                    #sale_report {
-                      margin-bottom: -18px;
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-
-        &.material-icon {
-          .header-wrapper {
-            .left-header {
-              width: 36%;
-            }
-          }
-        }
       }
 
       &.horizontal-wrapper {
@@ -2568,7 +2515,7 @@
 
             .sidebar-main {
               #sidebar-menu {
-                left: 0%;
+                left:0;
                 transform: translate(0, 0);
                 top: 125px;
                 background-color: var(--white);
@@ -2588,7 +2535,7 @@
 
       &.modern-type {
         .page-header {
-          padding-left: 0px;
+          padding-left: 0;
 
           .header-wrapper {
             .left-header {
@@ -2660,13 +2607,13 @@
           transition: $sidebar-transition;
 
           .header-wrapper {
-            border-radius: 0px 10px 0 0;
+            border-radius: 0 10px 0 0;
           }
         }
 
         .header-wrapper {
           border: 1px solid #f8f8f8;
-          border-radius: 0px 10px 0px 0px;
+          border-radius: 0 10px 0 0;
         }
       }
 
@@ -2679,64 +2626,6 @@
             .left-header {
               width: 38%;
             }
-          }
-        }
-      }
-
-      &.material-type {
-        .page-body-wrapper {
-          margin-top: 0;
-
-          .page-body {
-            margin-top: 0;
-          }
-
-          .sidebar-wrapper {
-            top: 0;
-          }
-        }
-      }
-
-      &.material-icon {
-        .page-header {
-          &.close_icon {
-            margin-top: 40px !important;
-          }
-        }
-
-        .page-body-wrapper {
-          margin-top: 0;
-
-          .page-body {
-            top: 0;
-            min-height: calc(100vh - 170px);
-            padding-bottom: 40px;
-          }
-        }
-
-        &.compact-small {
-          &.compact-sidebar {
-            .page-body {
-              min-height: calc(100vh - 220px);
-            }
-          }
-        }
-      }
-
-      &.advance-layout {
-        .page-header {
-          box-shadow: 0px 0px 10px rgba($black, 0.07);
-        }
-
-        .page-body-wrapper {
-          margin-top: 0;
-        }
-      }
-
-      &.only-body {
-        .page-header {
-          .header-wrapper {
-            border: unset;
           }
         }
       }

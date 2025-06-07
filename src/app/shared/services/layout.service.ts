@@ -30,9 +30,6 @@ export class LayoutService {
   applyLayout(layout: string) {    
     if(layout == 'dubai') {
       this.config.settings.sidebar_type = 'compact-wrapper';
-    } else if(layout == 'los-angeles') {
-      this.config.settings.sidebar_type = 'horizontal-wrapper material-type';
-      this.scrollMargin = -5000;
     } else if(layout == 'singapore') {
       this.config.settings.sidebar_type = 'horizontal-wrapper enterprice-type';
     } else if(layout == 'newyork') {

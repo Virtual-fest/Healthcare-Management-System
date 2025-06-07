@@ -440,7 +440,6 @@ html[dir="rtl"] {
 
     &:first-child {
       border-top-left-radius: unset !important;
-      border-top-right-radius: unset !important;
       border-top-right-radius: 1.3rem !important;
       border-bottom-right-radius: 1.3rem !important;
     }
@@ -621,7 +620,7 @@ html[dir="rtl"] {
 
                 .sidebar-link {
                   &::after {
-                    border-radius: 0px 5px 5px 0px;
+                    border-radius: 0 5px 5px 0;
                   }
                 }
               }
@@ -655,17 +654,6 @@ html[dir="rtl"] {
 
           i {
             transform: scaleX(-1);
-          }
-        }
-      }
-    }
-
-    &.only-body {
-      .page-header {
-        .header-wrapper {
-          .nav-right {
-            right: unset;
-            left: 60px;
           }
         }
       }
@@ -933,7 +921,7 @@ html[dir="rtl"] {
 
     &.open {
       right: unset;
-      left: 0px;
+      left: 0;
     }
 
     .customizer-header {
@@ -985,7 +973,7 @@ html[dir="rtl"] {
     &::before {
       left: unset;
       right: 0;
-      border-radius: 10px 0px 0px 10px;
+      border-radius: 10px 0 0 10px;
     }
   }
 
@@ -1031,7 +1019,7 @@ html[dir="rtl"] {
     [class*="title-line-"] {
       &::before {
         left: unset;
-        right: 0px;
+        right: 0;
       }
     }
   }
@@ -1049,7 +1037,6 @@ html[dir="rtl"] {
         .nav-item {
           .nav-link {
             svg {
-              margin-left: unset;
               margin-left: 5px;
             }
           }
@@ -1191,7 +1178,7 @@ html[dir="rtl"] {
 
             @media (max-width: 435px) {
               &:first-child {
-                padding-left: 0px;
+                padding-left: 0;
                 padding-right: unset;
               }
 
@@ -1453,14 +1440,6 @@ html[dir="rtl"] {
         }
       }
     }
-
-    &.material-type {
-      .page-body-wrapper {
-        .page-body {
-          margin-right: auto;
-        }
-      }
-    }
   }
 
   .page-header {
@@ -1634,34 +1613,9 @@ html[dir="rtl"] {
 
             ~ .page-body,
             ~ .footer {
-              margin-right: 0px;
+              margin-right: 0;
             }
           }
-        }
-      }
-    }
-
-    &.compact-small {
-      .page-header {
-        margin-right: 90px;
-      }
-
-      .page-body-wrapper {
-        div.sidebar-wrapper {
-          .sidebar-main {
-            .sidebar-links {
-              li {
-                .sidebar-submenu {
-                  right: 90px;
-                }
-              }
-            }
-          }
-        }
-
-        .footer,
-        .page-body {
-          margin-right: 90px;
         }
       }
     }
@@ -2469,7 +2423,7 @@ html[dir="rtl"] {
 
   .p-l-0 {
     padding-left: unset;
-    padding-right: 0px;
+    padding-right: 0;
   }
 
   .ps-4 {
@@ -2983,7 +2937,7 @@ html[dir="rtl"] {
       }
 
       .container.right {
-        right: 0%;
+        right: 0;
         left: unset;
 
         &::after {
@@ -4213,7 +4167,7 @@ html[dir="rtl"] {
         div.sidebar-wrapper {
           &.close_icon {
             ~ .page-body {
-              margin-right: 0px;
+              margin-right: 0;
             }
 
             ~ footer {
@@ -6287,7 +6241,7 @@ html[dir="rtl"] {
 
       &.ql-snow {
         .ql-formats {
-          margin-right: 0px;
+          margin-right: 0;
           margin-left: unset;
 
           .ql-picker {
@@ -7125,30 +7079,30 @@ html[dir="rtl"] {
     margin-left: unset;
 
     .lead-source-1 {
-      margin: 40px 20px 80px 0px;
+      margin: 40px 20px 80px 0;
 
       @media (max-width: 1610px) and (min-width: 1411px) {
-        margin: 60px 20px 100px 0px;
+        margin: 60px 20px 100px 0;
       }
 
       @media (max-width: 1410px) and (min-width: 1400px) {
-        margin: 70px 20px 120px 0px;
+        margin: 70px 20px 120px 0;
       }
 
       @media (max-width: 1399px) and (min-width: 1211px) {
-        margin: 30px 20px 80px 0px;
+        margin: 30px 20px 80px 0;
       }
 
       @media (max-width: 1210px) {
-        margin: 40px 20px 90px 0px;
+        margin: 40px 20px 90px 0;
       }
 
       @media (max-width: 767px) {
-        margin: 20px 20px 70px 0px;
+        margin: 20px 20px 70px 0;
       }
 
       @media (max-width: 585px) and (min-width: 576px) {
-        margin: 42px 32px 92px 0px;
+        margin: 42px 32px 92px 0;
       }
     }
 
@@ -7530,7 +7484,7 @@ html[dir="rtl"] {
       .activity-update {
         > li {
           > div {
-            border-radius: 0px 6px 6px 0px;
+            border-radius: 0 6px 6px 0;
 
             @media (max-width: 1490px) and (min-width: 1400px) {
               padding-right: 20px;
@@ -8010,7 +7964,7 @@ html[dir="rtl"] {
 
     &.open {
       right: unset;
-      left: 0px;
+      left: 0;
     }
 
     .customizer-header {
@@ -8071,7 +8025,7 @@ html[dir="rtl"] {
           }
 
           .header-wrapper {
-            border-radius: 10px 0px 0px 0px;
+            border-radius: 10px 0 0 0;
           }
         }
       }
@@ -8492,21 +8446,6 @@ html[dir="rtl"] {
     }
   }
 
-  @media only screen and (max-width: 991px) and (min-width: 768px) {
-    .page-wrapper {
-      &.compact-wrapper {
-        &.material-type {
-          .page-body-wrapper {
-            div.sidebar-wrapper {
-              left: unset;
-              right: 0;
-            }
-          }
-        }
-      }
-    }
-  }
-
   @media (min-width: 768px) {
     .float-md-end {
       float: left !important;
@@ -8738,7 +8677,7 @@ html[dir="rtl"] {
             left: 15px !important;
 
             li {
-              margin-left: 0px;
+              margin-left: 0;
             }
           }
         }
@@ -9561,7 +9500,7 @@ html[dir="rtl"] {
           }
 
           @media (max-width: 991px) {
-            padding-right: 0px;
+            padding-right: 0;
             padding-left: unset;
           }
         }
@@ -9720,22 +9659,6 @@ html[dir="rtl"] {
                 li {
                   .sidebar-submenu {
                     right: 112px;
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-
-      &.compact-small {
-        .page-body-wrapper {
-          div.sidebar-wrapper {
-            .sidebar-main {
-              .sidebar-links {
-                li {
-                  .sidebar-submenu {
-                    right: 80px;
                   }
                 }
               }

@@ -1008,9 +1008,9 @@ body {
 
     .social-widget {
       .social-icons {
-        box-shadow: 0px 42.1092px 27.8569px $dark-body-background,
-          0px 8.90772px 7.12618px $dark-body-background,
-          0px 2.02448px 3.44162px $dark-body-background;
+        box-shadow: 0 42.1092px 27.8569px $dark-body-background,
+          0 8.90772px 7.12618px $dark-body-background,
+          0 2.02448px 3.44162px $dark-body-background;
       }
     }
 
@@ -1149,41 +1149,6 @@ body {
     }
 
     // online course dashboard  css end
-
-    .page-wrapper {
-      &.material-type {
-        &.compact-wrapper {
-          .page-header {
-            &.close_icon {
-              .header-wrapper {
-                border-bottom: 1px solid $dark-card-border;
-              }
-            }
-          }
-        }
-      }
-
-      &.advance-layout {
-        .page-header {
-          background: $dark-card-background;
-        }
-
-        .page-body-wrapper {
-          .sidebar-wrapper {
-            border-bottom: 1px solid $dark-card-border;
-          }
-        }
-
-        .card {
-          border-color: $dark-card-border;
-        }
-      }
-
-      &.only-body {
-        background: $dark-body-background;
-      }
-    }
-
     .balance-card {
       .svg-box {
         background: $dark-card-background;
@@ -1326,14 +1291,6 @@ body {
         .page-header {
           .header-wrapper {
             border: 1px solid $dark-border-color;
-          }
-        }
-
-        &.only-body {
-          .page-header {
-            .header-wrapper {
-              border: unset;
-            }
           }
         }
       }
@@ -1564,36 +1521,6 @@ body {
 
     // tooltip css end
     .page-wrapper {
-      &.only-body {
-        .page-body-wrapper {
-          .page-title {
-            > .grid {
-              .col-span-6 {
-                &:first-child {
-                  h6 {
-                    color: rgba($dark-all-font-color, 0.5);
-                  }
-                }
-              }
-            }
-          }
-        }
-
-        .page-header {
-          .header-wrapper {
-            .search-full {
-              .form-group {
-                .Typeahead {
-                  .u-posRelative {
-                    background-color: $dark-card-background;
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-
       .page-header {
         .header-wrapper {
           .nav-right {
@@ -1915,7 +1842,7 @@ body {
 
         .page-title {
           background-color: $dark-card-background;
-          box-shadow: rgba(0, 0, 0, 0.07) 0px 4px 40px;
+          box-shadow: rgba(0, 0, 0, 0.07) 0 4px 40px;
         }
 
         div.sidebar-wrapper {
@@ -2010,7 +1937,7 @@ body {
       }
 
       .page-header {
-        box-shadow: 0px 3px 28px rgb(50 56 70);
+        box-shadow: 0 3px 28px rgb(50 56 70);
       }
 
       .badge-b-light {
@@ -2127,7 +2054,7 @@ body {
           .sidebar-wrapper {
             background: $dark-card-background;
             border-top: 1px solid $dark-card-border;
-            box-shadow: 0px 9px 24px rgb(50, 56, 70);
+            box-shadow: 0 9px 24px rgb(50, 56, 70);
 
             .sidebar-main {
               .sidebar-links {
@@ -2256,52 +2183,6 @@ body {
         }
       }
 
-      &.compact-small {
-        .page-header {
-          &.close_icon {
-            .header-wrapper {
-              @media (min-width: 576px) {
-                border-bottom: 1px solid $dark-card-border;
-              }
-            }
-          }
-        }
-
-        .page-body-wrapper {
-          .page-body {
-            .page-title {
-              @media (min-width: 576px) {
-                border-top: 1px solid $dark-card-border;
-              }
-            }
-          }
-        }
-
-        &.material-icon {
-          .page-header {
-            box-shadow: unset;
-          }
-
-          .page-body-wrapper {
-            .page-body {
-              .page-title {
-                @media (min-width: 576px) {
-                  border-top: 0;
-                }
-              }
-            }
-          }
-        }
-      }
-
-      &.material-type {
-        .page-header {
-          .header-wrapper {
-            border-radius: 15px 15px 0 0;
-          }
-        }
-      }
-
       // material icon css
       &.material-icon {
         .page-header {
@@ -2343,28 +2224,6 @@ body {
         .page-body-wrapper {
           .page-body {
             background-color: $transparent-color;
-          }
-        }
-      }
-
-      &.advance-layout {
-        background-color: $dark-body-background;
-
-        .page-header {
-          .header-wrapper {
-            background: $transparent-color;
-
-            .header-logo-wrapper {
-              background: $transparent-color;
-            }
-          }
-        }
-
-        .page-body-wrapper {
-          background: $transparent-color;
-
-          .page-body {
-            background: $transparent-color;
           }
         }
       }
@@ -6462,7 +6321,7 @@ body {
 
     .icon-hover-bottom {
       background-color: $dark-card-background;
-      box-shadow: 0px 0px 1px 1px $dark-card-border;
+      box-shadow: 0 0 1px 1px $dark-card-border;
 
       .icon-title {
         color: $dark-all-font-color;
@@ -6753,7 +6612,7 @@ body {
 
       code[class*="language-"],
       pre[class*="language-"] {
-        text-shadow: 0px 1px $black;
+        text-shadow: 0 1px $black;
 
         ::selection {
           text-shadow: none;
@@ -7772,7 +7631,7 @@ body {
 
     @keyframes pulse-animate-dark {
       0% {
-        box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.4);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.4);
       }
 
       100% {
@@ -8257,7 +8116,7 @@ body {
 
     .md-sidebar {
       .job-sidebar {
-        box-shadow: 0px 9px 20px rgba($dark-body-background, 0.7);
+        box-shadow: 0 9px 20px rgba($dark-body-background, 0.7);
       }
     }
 
@@ -8859,7 +8718,7 @@ body {
     }
 
     .our-product-wrapper {
-      box-shadow: 0px 3px 17px rgb(113 113 137 / 18%);
+      box-shadow: 0 3px 17px rgb(113 113 137 / 18%);
     }
     .order-quantity {
       input {
@@ -8952,7 +8811,7 @@ body {
 
       .compare-icon {
         &[class*="shadow-"] {
-          box-shadow: 0px 10.511241px 12.4089927673px 0px $dark-card-inbox;
+          box-shadow: 0 10.511241px 12.4089927673px 0 $dark-card-inbox;
         }
       }
     }
@@ -9101,7 +8960,7 @@ body {
 
               .dots {
                 border-color: $dark-body-background;
-                box-shadow: 0px 6px 18px 0px rgba($dark-small-font-color, 0.19);
+                box-shadow: 0 6px 18px 0 rgba($dark-small-font-color, 0.19);
               }
             }
           }
@@ -9207,25 +9066,6 @@ body {
           background: $dark-card-border;
         }
       }
-    }
-
-    audio::-webkit-media-controls-play-button,
-    audio::-webkit-media-controls-panel {
-      background-color: $dark-card-background;
-      color: $dark-all-font-color;
-
-      @media (max-width: 335px) {
-        background-color: $transparent-color;
-      }
-    }
-
-    audio::-webkit-media-controls-current-time-display,
-    audio::-webkit-media-controls-time-remaining-display {
-      text-shadow: unset;
-    }
-
-    audio::-webkit-media-controls-enclosure {
-      background: unset;
     }
 
     // Project-list
@@ -10109,7 +9949,7 @@ body {
         }
 
         #rangeButtons {
-          box-shadow: 0px 0px 28px 6px $dark-body-background;
+          box-shadow: 0 0 28px 6px $dark-body-background;
 
           button {
             background-color: $dark-body-background;
@@ -10295,7 +10135,7 @@ body {
                   }
 
                   [class*="square-"] {
-                    box-shadow: 0px 0px 28px 6px $dark-body-background;
+                    box-shadow: 0 0 28px 6px $dark-body-background;
                   }
                 }
 
@@ -11359,7 +11199,7 @@ body {
         .nav-item {
           .nav-link {
             .nav-rounded {
-              box-shadow: inset 0px 9px 20px 0px rgba($dark-all-font-color, 0.1);
+              box-shadow: inset 0 9px 20px 0 rgba($dark-all-font-color, 0.1);
             }
 
             .product-icons {
@@ -11694,233 +11534,6 @@ body {
         &.modern-type {
           .page-body-wrapper {
             background-color: $dark-body-background;
-          }
-        }
-      }
-    }
-  }
-
-  &.dark-sidebar {
-    .toggle-sidebar {
-      svg {
-        stroke: var(--theme-default);
-      }
-    }
-
-    .page-wrapper {
-      .sidebar-main-title {
-        p {
-          color: $dark-all-font-color;
-        }
-      }
-
-      &.compact-wrapper {
-        .page-body-wrapper {
-          div.sidebar-wrapper {
-            background-color: $dark-card-background;
-
-            .sidebar-main {
-              .sidebar-links {
-                li {
-                  a {
-                    span {
-                      color: $dark-all-font-color;
-                    }
-
-                    svg {
-                      stroke: $dark-all-font-color !important;
-                    }
-                  }
-                }
-
-                > li {
-                  .sidebar-link {
-                    &.active {
-                      background-color: rgba($primary-color, 0.2);
-
-                      svg {
-                        color: var(--theme-default);
-                        stroke: var(--theme-default);
-                      }
-                    }
-                  }
-
-                  .sidebar-submenu {
-                    li {
-                      a {
-                        color: $dark-all-font-color;
-                      }
-                    }
-                  }
-                }
-
-                .sidebar-list {
-                  ul.sidebar-submenu {
-                    li {
-                      a {
-                        span {
-                          color: $dark-all-font-color;
-                        }
-
-                        &.active {
-                          color: var(--theme-default);
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-
-          .according-menu {
-            i {
-              color: $dark-all-font-color;
-            }
-          }
-        }
-      }
-
-      &.horizontal-wrapper {
-        .page-body-wrapper {
-          .sidebar-wrapper {
-            background: $dark-card-background;
-
-            .sidebar-main {
-              background-color: $dark-card-background;
-
-              .sidebar-links {
-                > li {
-                  > a {
-                    color: $dark-all-font-color;
-
-                    svg {
-                      &.stroke-icon {
-                        stroke: rgba($dark-all-font-color, 0.6);
-                      }
-
-                      &.fill-icon {
-                        fill: rgba($dark-all-font-color, 0.6);
-                      }
-                    }
-                  }
-
-                  .sidebar-submenu {
-                    background: $dark-card-background;
-
-                    li {
-                      a {
-                        color: $dark-all-font-color;
-
-                        &.active,
-                        &:hover {
-                          color: var(--theme-default);
-                        }
-                      }
-
-                      .sidebar-submenu {
-                        background: $dark-card-background;
-                      }
-                    }
-                  }
-                }
-              }
-
-              .left-arrow,
-              .right-arrow {
-                background-color: $dark-card-background;
-                color: $dark-all-font-color;
-              }
-            }
-          }
-        }
-      }
-
-      &.compact-sidebar {
-        .page-body-wrapper {
-          div {
-            &.sidebar-wrapper {
-              > div {
-                background: $dark-card-background;
-              }
-
-              .sidebar-main {
-                .sidebar-links {
-                  li {
-                    .sidebar-title {
-                      border-bottom: 1px solid $dark-card-border;
-                    }
-
-                    a {
-                      span {
-                        color: $dark-all-font-color;
-                      }
-
-                      svg {
-                        stroke: $dark-all-font-color;
-                      }
-                    }
-
-                    .sidebar-submenu {
-                      background-color: $dark-card-background;
-
-                      li {
-                        a {
-                          border-bottom: 1px solid $dark-card-border;
-                        }
-                      }
-                    }
-                  }
-
-                  > li {
-                    .sidebar-link {
-                      &.active {
-                        background-color: rgba($primary-color, 0.2);
-
-                        span {
-                          color: var(--theme-default);
-                        }
-
-                        svg {
-                          color: var(--theme-default);
-                          stroke: var(--theme-default);
-                        }
-                      }
-                    }
-
-                    .sidebar-submenu {
-                      li {
-                        a {
-                          color: $dark-all-font-color;
-                        }
-                      }
-                    }
-                  }
-
-                  .sidebar-list {
-                    ul.sidebar-submenu {
-                      li {
-                        a {
-                          span {
-                            color: $dark-all-font-color;
-                          }
-
-                          &.active {
-                            color: var(--theme-default);
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-
-          .according-menu {
-            i {
-              color: $dark-all-font-color;
-            }
           }
         }
       }
