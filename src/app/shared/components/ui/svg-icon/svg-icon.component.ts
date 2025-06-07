@@ -1,7 +1,7 @@
-import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {Component, Input} from '@angular/core';
 
-import { LayoutService } from '../../../services/layout.service';
+import {LayoutService} from '../../../services/layout.service';
 
 @Component({
   selector: 'app-svg-icon',
@@ -18,8 +18,4 @@ export class SvgIconComponent {
 
   constructor(public layoutService: LayoutService){}
 
-  getSvgType() {
-    return document.getElementsByClassName("page-sub-header")[0].getAttribute("icon") == "stroke-svg";
-  }
-  
 }
