@@ -87,10 +87,10 @@ export class SettingCustomizerComponent {
 
       this.router.navigate([], {
         relativeTo: this.route,
-        queryParams: { layout: 'dubai' },
-        queryParamsHandling: 'merge'
-      })
-    }
+        // queryParams: {layout: 'dubai'},
+        // queryParamsHandling: 'merge'
+      }).then()
+     }
     window.location.reload();
   }
 

@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Output} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 
 import {layouts} from '../../../../data/layout';
@@ -12,7 +12,7 @@ import {LayoutService} from '../../../../services/layout.service';
   styleUrl: './layout-customizer.component.scss'
 })
 
-export class LayoutCustomizerComponent {
+export class LayoutCustomizerComponent implements OnInit{
 
   @Output() layoutOpen = new EventEmitter();
 
@@ -34,9 +34,9 @@ export class LayoutCustomizerComponent {
     if (savedLayout) {
       this.router.navigate([], {
         relativeTo: this.route,
-        queryParams: { layout: savedLayout },
-        queryParamsHandling: 'merge'
-      });
+        // queryParams: {layout: savedLayout},
+        // queryParamsHandling: 'merge'
+      }).then();
     }
   }
 

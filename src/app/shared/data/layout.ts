@@ -14,19 +14,19 @@ export const layouts: Layout[] = [
         slug: 'los-angeles'
     },
     {
-        id: 6,
+        id: 3,
         title: 'Singapore',
         image: 'assets/images/landing/layout-images/singapore.jpg',
         slug: 'singapore'
     },
     {
-        id: 7,
+        id: 4,
         title: 'New York',
         image: 'assets/images/landing/layout-images/newyork.png',
         slug: 'newyork'
     },
     {
-        id: 11,
+        id: 5,
         title: 'Seoul',
         image: 'assets/images/landing/layout-images/dubai.jpg',
         slug: 'seoul'

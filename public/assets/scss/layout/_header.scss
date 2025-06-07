@@ -46,6 +46,11 @@
 /*======= Page Header css ends  ======= */
 
 /**======Main Header css Start ======**/
+
+.page-wrapper,.landing-page {
+  overflow: hidden
+}
+
 .offcanvas,
 .offcanvas-bookmark {
   .page-wrapper {

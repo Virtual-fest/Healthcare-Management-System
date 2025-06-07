@@ -53,7 +53,7 @@
     <thead>
       <tr>
         @if(hasCheckbox) {
-          <th class="datatable-checkbox"
+          <th class="datatable-checkbox pr-3"
             [class.selected-checkbox]="selected.length && selected.length != tableConfig.data.length">
             <input type="checkbox" class="cb-select-checkbox"
               [checked]="(tableConfig && tableConfig.data.length && selected && selected.length == tableConfig.data.length) || false"
