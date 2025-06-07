@@ -174,7 +174,7 @@
           &:before {
             content: "\f002";
             position: absolute;
-            font-family: FontAwesome !important;
+            font-family: $font-awesome, $font-serif !important;
             left: 30px;
             top: 27px;
             font-size: 16px;
@@ -1341,7 +1341,7 @@
                     color: rgba(43, 43, 43, 0.6);
                     letter-spacing: 0.06em;
                     font-weight: 500;
-                    font-family: Roboto;
+                    font-family: $font-roboto, $font-serif;
                     transition: all 0.3s ease;
 
                     &:after {
@@ -3149,7 +3149,6 @@
 
       .page-body-wrapper {
         .page-body {
-          margin-top: 0 !important;
           padding-left: 90px;
           max-width: 1660px;
           margin: 0 auto;
