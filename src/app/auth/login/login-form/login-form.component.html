@@ -7,9 +7,9 @@
                 class="form-control"
                 id="validationTooltip01"
                 type="email"
-                placeholder="test@gmail.com"
-                formControlName="email"
-                autocomplete="off"
+                [placeholder]="'test@gmail.com'"
+                [formControlName]="'email'"
+                [autocomplete]="'off'"
                 [ngClass]="{
                   'is-invalid': loginForm.controls['email'].touched && loginForm.controls['email'].invalid,
                   'is-valid': loginForm.controls['email'].valid
@@ -28,8 +28,8 @@
 
     <div class="form-group needs-validation custom-input">
         <label class="form-label" for="validationTooltip02">Email Password</label>
-        <input class="form-control" id="validationTooltip02" type="text" name="login[password]" placeholder="*********"
-               [formControlName]="'password'" autocomplete="false"
+        <input class="form-control" name="login[password]" id="validatepwd" type="password"
+               [placeholder]="'Enter your password'" [formControlName]="'password'"
                [ngClass]="{ 'is-invalid' : loginForm.controls['password'].touched &&
         loginForm.controls['password'].errors?.['required'] , 'is-valid' : loginForm.controls['password'].valid}">
         @if (loginForm.controls['password'].touched && loginForm.controls['password'].errors?.['required']) {

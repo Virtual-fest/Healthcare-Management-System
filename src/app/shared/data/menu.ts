@@ -9,8 +9,6 @@ export const menuItems: Menu[] = [
     type: 'sub',
     active: false,
     level: 1,
-    badge: true,
-    badge_value: "New",
     badge_color: "success",
     children: [
       { path: '/reports/sales', title: 'Sales', type: 'link' },
